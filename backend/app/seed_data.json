@@ -1,0 +1,232 @@
+{
+  "users": [
+    {
+      "id": "demo_user_1",
+      "email": "demo@trustbase.ng",
+      "firstName": "Adaora",
+      "lastName": "Okafor",
+      "profileComplete": false,
+      "provider": "email",
+      "createdAt": "2024-01-15T10:00:00Z"
+    },
+    {
+      "id": "demo_google_user",
+      "email": "adaora.okafor@gmail.com",
+      "firstName": "Adaora",
+      "lastName": "Okafor",
+      "profileComplete": false,
+      "provider": "google",
+      "createdAt": "2024-01-15T10:00:00Z"
+    },
+    {
+      "id": "demo_user_2",
+      "email": "chidi.nwankwo@email.com",
+      "firstName": "Chidi",
+      "lastName": "Nwankwo",
+      "profileComplete": true,
+      "provider": "email",
+      "createdAt": "2024-01-10T14:30:00Z"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "org_1",
+      "name": "First Bank Nigeria",
+      "logo": "account_balance",
+      "trustScore": 8.5,
+      "consentActive": true,
+      "dataTypes": ["Personal Info", "Financial Data", "Transaction History"],
+      "description": "Leading Nigerian commercial bank providing comprehensive financial services",
+      "category": "Banking"
+    },
+    {
+      "id": "org_2",
+      "name": "MTN Nigeria",
+      "logo": "phone",
+      "trustScore": 7.8,
+      "consentActive": true,
+      "dataTypes": ["Contact Info", "Usage Data", "Location Data"],
+      "description": "Nigeria's largest telecommunications company",
+      "category": "Telecommunications"
+    },
+    {
+      "id": "org_3",
+      "name": "Jumia",
+      "logo": "shopping_cart",
+      "trustScore": 7.2,
+      "consentActive": false,
+      "dataTypes": ["Purchase History", "Preferences", "Delivery Address"],
+      "description": "Leading e-commerce platform in Nigeria",
+      "category": "E-commerce"
+    },
+    {
+      "id": "org_4",
+      "name": "Paystack",
+      "logo": "payment",
+      "trustScore": 9.1,
+      "consentActive": true,
+      "dataTypes": ["Payment Info", "Transaction Data"],
+      "description": "Modern online and offline payments for Africa",
+      "category": "Fintech"
+    },
+    {
+      "id": "org_5",
+      "name": "Flutterwave",
+      "logo": "credit_card",
+      "trustScore": 8.7,
+      "consentActive": true,
+      "dataTypes": ["Payment Info", "Merchant Data"],
+      "description": "Payment infrastructure for global merchants and payment service providers",
+      "category": "Fintech"
+    }
+  ],
+  "consents": [
+    {
+      "id": "consent_1",
+      "user_id": "demo_user_1",
+      "organization_id": "org_1",
+      "organization_name": "First Bank Nigeria",
+      "data_types": ["Personal Info", "Financial Data", "Transaction History"],
+      "purpose": "Account management and loan processing",
+      "status": "active",
+      "granted_at": "2024-01-15T10:30:00Z",
+      "revoked_at": null,
+      "expires_at": "2025-01-15T10:30:00Z"
+    },
+    {
+      "id": "consent_2",
+      "user_id": "demo_user_1",
+      "organization_id": "org_2",
+      "organization_name": "MTN Nigeria",
+      "data_types": ["Contact Info", "Usage Data", "Location Data"],
+      "purpose": "Service optimization and billing",
+      "status": "active",
+      "granted_at": "2024-01-10T14:15:00Z",
+      "revoked_at": null,
+      "expires_at": "2025-01-10T14:15:00Z"
+    },
+    {
+      "id": "consent_3",
+      "user_id": "demo_user_1",
+      "organization_id": "org_3",
+      "organization_name": "Jumia",
+      "data_types": ["Purchase History", "Preferences", "Delivery Address"],
+      "purpose": "Personalized recommendations and delivery",
+      "status": "revoked",
+      "granted_at": "2024-01-05T09:45:00Z",
+      "revoked_at": "2024-01-18T16:20:00Z",
+      "expires_at": "2025-01-05T09:45:00Z"
+    },
+    {
+      "id": "consent_4",
+      "user_id": "demo_user_1",
+      "organization_id": "org_4",
+      "organization_name": "Paystack",
+      "data_types": ["Payment Info", "Transaction Data"],
+      "purpose": "Payment processing and fraud prevention",
+      "status": "active",
+      "granted_at": "2024-01-12T11:00:00Z",
+      "revoked_at": null,
+      "expires_at": "2025-01-12T11:00:00Z"
+    }
+  ],
+  "access_logs": [
+    {
+      "id": "log_1",
+      "user_id": "demo_user_1",
+      "organization_id": "org_1",
+      "organization_name": "First Bank Nigeria",
+      "organization_logo": "account_balance",
+      "data_type": "Transaction History",
+      "purpose": "Account verification for loan application",
+      "timestamp": "2024-01-20T14:30:00Z",
+      "status": "approved",
+      "ip_address": "197.210.70.1",
+      "user_agent": "FirstBank-Mobile/2.1.0"
+    },
+    {
+      "id": "log_2",
+      "user_id": "demo_user_1",
+      "organization_id": "org_2",
+      "organization_name": "MTN Nigeria",
+      "organization_logo": "phone",
+      "data_type": "Usage Data",
+      "purpose": "Service optimization and billing",
+      "timestamp": "2024-01-20T09:15:00Z",
+      "status": "approved",
+      "ip_address": "41.203.64.1",
+      "user_agent": "MyMTN-App/3.2.1"
+    },
+    {
+      "id": "log_3",
+      "user_id": "demo_user_1",
+      "organization_id": "org_4",
+      "organization_name": "Paystack",
+      "organization_logo": "payment",
+      "data_type": "Payment Information",
+      "purpose": "Transaction processing",
+      "timestamp": "2024-01-19T16:45:00Z",
+      "status": "approved",
+      "ip_address": "52.31.139.75",
+      "user_agent": "Paystack-Gateway/1.0"
+    },
+    {
+      "id": "log_4",
+      "user_id": "demo_user_1",
+      "organization_id": "org_3",
+      "organization_name": "Jumia",
+      "organization_logo": "shopping_cart",
+      "data_type": "Purchase History",
+      "purpose": "Personalized recommendations",
+      "timestamp": "2024-01-19T11:20:00Z",
+      "status": "denied",
+      "ip_address": "154.113.16.1",
+      "user_agent": "Jumia-App/4.1.2"
+    },
+    {
+      "id": "log_5",
+      "user_id": "demo_user_1",
+      "organization_id": "org_1",
+      "organization_name": "First Bank Nigeria",
+      "organization_logo": "account_balance",
+      "data_type": "Personal Information",
+      "purpose": "KYC compliance check",
+      "timestamp": "2024-01-18T13:10:00Z",
+      "status": "approved",
+      "ip_address": "197.210.70.1",
+      "user_agent": "FirstBank-Web/1.5.0"
+    }
+  ],
+  "yarn_prompts": [
+    {
+      "language": "en-ng",
+      "prompt": "Why did First Bank Nigeria access my transaction history?",
+      "response": "Banks need your financial data to assess your creditworthiness and comply with Central Bank of Nigeria regulations. They use your transaction history to understand your spending patterns and determine if you can repay loans safely.",
+      "audio_file": "en_ng_banking.mp3"
+    },
+    {
+      "language": "en-ng",
+      "prompt": "Explain why MTN accessed my usage data",
+      "response": "Telecommunications companies like MTN collect your usage data to improve network quality and provide better services. They also use location data to optimize network coverage in your area.",
+      "audio_file": "en_ng_telecom.mp3"
+    },
+    {
+      "language": "ig",
+      "prompt": "Gịnị mere First Bank ji nweta akụkọ ego m?",
+      "response": "Ụlọ akụ chọrọ data ego gị iji chọpụta ma ị nwere ike ịkwụghachi ego ha ga-ebinye gị. Ha na-eji akụkọ ego gị amata otú ị si emefu ego ma chọpụta ma ị ga-enwe ike ịkwụghachi ugwo n'oge.",
+      "audio_file": "ig_banking.mp3"
+    },
+    {
+      "language": "yo",
+      "prompt": "Kilode ti MTN fi wole si data lilo mi?",
+      "response": "Awon ile-ise ibaraenisepo bi MTN n gba data lilo re lati mu iṣẹ network dara si ati lati fun ọ ni iṣẹ to dara ju. Won tun n lo data ipo re lati mu network coverage dara si ni agbegbe re.",
+      "audio_file": "yo_telecom.mp3"
+    },
+    {
+      "language": "ha",
+      "prompt": "Me ya sa MTN ta shiga bayanan amfani na?",
+      "response": "Kamfanonin sadarwa kamar MTN suna karbar bayanan amfaninku don inganta ingancin hanyar sadarwa da kuma ba ku sabis mafi kyau. Suna kuma amfani da bayanan wurin ku don inganta yadda hanyar sadarwa ke aiki a yankinku.",
+      "audio_file": "ha_telecom.mp3"
+    }
+  ]
+}
