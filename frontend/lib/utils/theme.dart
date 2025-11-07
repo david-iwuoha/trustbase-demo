@@ -93,7 +93,7 @@ class TrustBaseTheme {
       ),
       
       // Card Theme
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         elevation: 0,
         color: TrustBaseColors.cardBackground,
         shape: RoundedRectangleBorder(
